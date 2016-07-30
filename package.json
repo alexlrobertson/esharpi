@@ -1,6 +1,6 @@
 {
   "name": "esharpi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A NodeJS based syntax highlighter based on http://rubyquiz.strd6.com/quizzes/218-syntax-highlighting",
   "main": "index.js",
   "dependencies": {
