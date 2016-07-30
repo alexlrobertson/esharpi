@@ -13,7 +13,7 @@
     "eslint-plugin-import": "^1.12.0"
   },
   "scripts": {
-    "test": "eslint ."
+    "test": "node test.js && eslint ."
   },
   "repository": {
     "type": "git",
