@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: 0, no-console: 0 */
 const fs = require('fs');
 const highlight = require('./');
 
@@ -16,10 +17,10 @@ function getFile() {
   return new Promise((resolve, reject) => {
     fs.readFile('./example.js', (err, file) => {
       if (err) {
-        return reject(err);
+        reject(err);
+      } else {
+        resolve(file.toString());
       }
-
-      resolve(file.toString());
     });
   });
 }
