@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "A NodeJS based syntax highlighter based on http://rubyquiz.strd6.com/quizzes/218-syntax-highlighting",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "chiffon": "^2.5.4"
+  },
   "devDependencies": {
     "eslint": "^3.2.0",
     "eslint-config-airbnb-base": "^5.0.1",
