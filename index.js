@@ -1,12 +1,7 @@
 const chiffon = require('chiffon');
 const chalk = require('chalk');
 
-/**
- * Get function to decorate token value
- * @param tokenType
- * @returns {Function}
- */
-function getHighlightColor(tokenType) {
+function getANSIColorizer(tokenType) {
   switch (tokenType) {
     case 'Boolean':
     case 'Null':
@@ -26,6 +21,30 @@ function getHighlightColor(tokenType) {
   }
 }
 
+function getHTMLColorizerForColor(color) {
+  return (input) => `<span style="color: ${color};">${input}</span>`;
+}
+
+function getHTMLColorizer(tokenType) {
+  switch (tokenType) {
+    case 'Boolean':
+    case 'Null':
+    case 'Keyword':
+      return getHTMLColorizerForColor('red');
+    case 'Comment':
+    case 'RegularExpression':
+    case 'String':
+    case 'Template':
+      return getHTMLColorizerForColor('green');
+    case 'Identifier':
+      return getHTMLColorizerForColor('yellow');
+    case 'Numeric':
+      return getHTMLColorizerForColor('blue');
+    default:
+      return (input) => input;
+  }
+}
+
 function highlight(input) {
   return chiffon
     .tokenize(input, {
@@ -33,8 +52,19 @@ function highlight(input) {
       whiteSpace: true,
       lineTerminator: true,
     })
-    .map((token) => getHighlightColor(token.type)(token.value))
+    .map((token) => getANSIColorizer(token.type)(token.value))
     .join('');
 }
+
+highlight.html = function highlightHtml(input) {
+  return chiffon
+    .tokenize(input, {
+      comment: true,
+      whiteSpace: true,
+      lineTerminator: true,
+    })
+    .map((token) => getHTMLColorizer(token.type)(token.value))
+    .join('');
+};
 
 module.exports = highlight;
