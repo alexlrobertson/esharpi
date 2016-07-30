@@ -30,16 +30,16 @@ function getHTMLColorizer(tokenType) {
     case 'Boolean':
     case 'Null':
     case 'Keyword':
-      return getHTMLColorizerForColor('red');
+      return getHTMLColorizerForColor('rgb(229, 107, 104)');
     case 'Comment':
     case 'RegularExpression':
     case 'String':
     case 'Template':
-      return getHTMLColorizerForColor('green');
+      return getHTMLColorizerForColor('rgb(152, 192, 35)');
     case 'Identifier':
-      return getHTMLColorizerForColor('yellow');
+      return getHTMLColorizerForColor('rgb(214, 178, 70)');
     case 'Numeric':
-      return getHTMLColorizerForColor('blue');
+      return getHTMLColorizerForColor('rgb(59, 114, 212)');
     default:
       return (input) => input;
   }
