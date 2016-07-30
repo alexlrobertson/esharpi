@@ -5,8 +5,16 @@ A NodeJS based ECMAScript syntax highlighter based on http://rubyquiz.strd6.com/
 
 ## Usage
 
+### NodeJS
+
 ```javascript
 const esharpi = require('esharpi');
 
 console.log(esharpi('const foo = "bar";'));
+```
+
+### Command Line
+
+```bash
+esharpi example.js
 ```
