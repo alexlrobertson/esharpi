@@ -28,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/alexlrobertson/syntax-highlighting/issues"
   },
+  "tonicExample": "const esharpi = require('esharpi');\nconst fs = require('fs');\n\nesharpi(fs.readFileSync('./index.js').toString());",
   "homepage": "https://github.com/alexlrobertson/syntax-highlighting#readme"
 }
