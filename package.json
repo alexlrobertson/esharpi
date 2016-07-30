@@ -1,0 +1,26 @@
+{
+  "name": "syntax-highlighting",
+  "version": "0.0.0",
+  "description": "A NodeJS based syntax highlighter based on http://rubyquiz.strd6.com/quizzes/218-syntax-highlighting",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.2.0",
+    "eslint-config-airbnb-base": "^5.0.1",
+    "eslint-plugin-import": "^1.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlrobertson/syntax-highlighting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlrobertson/syntax-highlighting/issues"
+  },
+  "homepage": "https://github.com/alexlrobertson/syntax-highlighting#readme"
+}
