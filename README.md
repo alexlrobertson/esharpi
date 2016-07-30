@@ -5,6 +5,8 @@ A NodeJS based ECMAScript syntax highlighter based on http://rubyquiz.strd6.com/
 
 ## Usage
 
+`npm install esharpi`
+
 ### NodeJS
 
 ```javascript
